@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+    width:500px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap:20px;
+}
+ul li{
+    font: 7em sans-serif;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+    font-weight: 700;
+}
+ul li.active{
+    animation: jump 2s ease-in-out;
+}
+
+@keyframes jump{
+    0%{
+        transform: translate(0,0) rotate(180deg);
+    }
+    100%{
+        transform: scale(2.5) translate(0, -50px);
+    }
+}
